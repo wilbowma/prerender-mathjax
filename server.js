@@ -15,7 +15,7 @@ function server(rootpath, options) {
 
   var prerender = prerenderMathjax(options);
 
-  var app = koa();
+  var app = new koa();
   
   app.use(function* (next) {
     debug('serve', this.path);
